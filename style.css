@@ -1,0 +1,237 @@
+ul li {
+    display: flex;
+    gap: 20px;
+    padding: 8px 20px;
+    border-radius: 22px;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+@media screen and (min-width: 500px) {
+    li:hover {
+        background-color: #181818;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    opacity: 0;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    opacity: 0;
+}
+
+* {
+    scrollbar-width: none;
+    color: #E7E9EA;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+.hcp:hover {
+    cursor: pointer;
+}
+
+.hu:hover {
+    text-decoration: underline;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+video:hover {
+    cursor: pointer;
+}
+
+.artical:hover {
+    cursor: pointer;
+}
+
+.like>div {
+    transition: color 0.3s ease, fill 0.3s ease;
+}
+
+.like>div svg {
+    width: 32px;
+    /* Larger SVG for better visibility */
+    height: 32px;
+    fill: gray;
+    /* Default icon color */
+    background-color: transparent;
+    /* Default background */
+    border-radius: 50%;
+    /* Full border radius for circular background */
+    padding: 4px;
+    transition: background-color 0.3s ease, fill 0.3s ease;
+}
+
+.like>div span {
+    color: gray;
+    /* Default text color */
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.svg {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    border-radius: 50%;
+    /* Circular background on hover */
+    fill: gray;
+    /* Default icon color */
+    transition: background-color 0.3s ease, fill 0.3s ease;
+}
+
+/* Hover Effect for SVG */
+.svg:hover {
+    padding: 7px;
+    background-color: rgba(29, 156, 240, 0.139);
+    /* Light blue background */
+    fill: #1d9bf0;
+    /* Premium Twitter blue color */
+}
+
+.like>div:hover svg {
+    background-color: rgba(var(--hover-color-rgb), 0.2);
+    /* Background with reduced opacity */
+    fill: rgb(var(--hover-color-rgb));
+    /* Icon color when hovered */
+}
+
+.like>div:hover span {
+    color: rgb(var(--hover-color-rgb));
+    /* Change text color */
+}
+
+/* Specific Colors for Each Item */
+.like>div:nth-child(1):hover {
+    --hover-color-rgb: 249, 24, 128;
+    /* Like - Twitter Pink */
+}
+
+.like>div:nth-child(2):hover {
+    --hover-color-rgb: 29, 155, 240;
+    /* Comment - Twitter Blue */
+}
+
+.like>div:nth-child(3):hover {
+    --hover-color-rgb: 0, 186, 124;
+    /* Share - Green */
+}
+
+.like>div:nth-child(4):hover {
+    --hover-color-rgb: 255, 212, 0;
+    /* Views - Yellow */
+}
+
+.like>div:nth-child(5):hover {
+    --hover-color-rgb: 29, 155, 240;
+    /* Comment - Twitter Blue */
+}
+
+.like>div:nth-child(6):hover {
+    --hover-color-rgb: 249, 24, 128;
+    /* Like - Twitter Pink */
+}
+
+@media screen and (max-width: 500px) {
+    .phone {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .artical {
+        padding-right: 10px;
+
+    }
+
+    .artical span {
+        font-size: 13px;
+    }
+
+
+    .like>div svg {
+        width: 25px;
+        height: 25px;
+        padding: 4px;
+    }
+
+    .like>div span {
+        color: gray;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    .svg {
+        width: 23px;
+        height: 23px;
+        padding: 3px;
+
+    }
+
+    .svg:hover {
+        padding: 4px;
+
+    }
+
+    .nav {
+        top: 48px;
+    }
+
+    .second {
+        margin-top: 90px;
+    }
+
+    .profile {
+        display: block;
+    }
+
+    .upload {
+        display: none;
+    }
+
+    ul li:active {
+        background-color: #100f0f;
+    }
+
+    ul li {
+        padding: 12px 16px;
+        border-radius: 1px;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    width: 100vw;
+    transition: left 0.3s ease-in-out;
+}
+
+.closeSidebar {
+    position: fixed;
+    right: -35%;
+    width: 35%;
+    bottom: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.closeSidebar.active {
+    right: 0;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.shadow-right {
+    box-shadow: 5px 0 10px -5px rgba(255, 255, 255, 0.3);
+    /* Right-side shadow */
+}
